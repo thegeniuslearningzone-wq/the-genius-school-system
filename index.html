@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Genius School System — join THE GENIUS, be THE GENIUS</title>
+<meta name="description" content="The Genius School System — building knowledge, training, and character.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to main content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar glass" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="brand" aria-label="The Genius School System — home">
+      <img src="assets/logo.png" alt="The Genius School System crest" class="brand-logo">
+      <span class="brand-name">The Genius<br><small>SCHOOL SYSTEM</small></span>
+    </a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#features" data-i18n="nav.features">Why Us</a>
+      <a href="#academics" data-i18n="nav.academics">Academics</a>
+      <a href="#gallery" data-i18n="nav.gallery">Campus</a>
+      <a href="#leadership" data-i18n="nav.leadership">Leadership</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <button type="button" class="toggle-btn" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="toggle-icon" aria-hidden="true">🌙</span>
+      </button>
+      <button type="button" class="toggle-btn lang-toggle" id="lang-toggle" aria-label="Toggle Urdu language">
+        <span id="lang-toggle-label">اردو</span>
+      </button>
+      <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Enroll Now</a>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="mobile-drawer glass" id="mobile-drawer" aria-hidden="true">
+  <nav aria-label="Mobile primary">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#features" data-i18n="nav.features">Why Us</a>
+    <a href="#academics" data-i18n="nav.academics">Academics</a>
+    <a href="#gallery" data-i18n="nav.gallery">Campus</a>
+    <a href="#leadership" data-i18n="nav.leadership">Leadership</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+    <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Enroll Now</a>
+  </nav>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="flame-glow"></span>
+    </div>
+    <div class="container hero-inner">
+      <img src="assets/logo.png" alt="" class="hero-crest" aria-hidden="true">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Knowledge · Training · Character</p>
+      <h1 class="hero-tagline tagline">
+        <span class="cap">join</span> <span class="brand-word">THE GENIUS</span>,
+        <span class="cap">be</span> <span class="brand-word">THE GENIUS</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">
+        A school built on three pillars — where every learner is trained, tested, and trusted to lead.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Get in Touch</a>
+        <a href="#about" class="btn btn-secondary" data-i18n="hero.ctaSecondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="about.eyebrow">About the School</p>
+        <h2 data-i18n="about.title">Built on three pillars</h2>
+        <p data-i18n-block data-i18n="about.intro">
+          The Genius School System was founded on a simple belief: that real education
+          shapes the mind, the discipline, and the character of a child in equal measure.
+        </p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar-card glass" data-reveal>
+          <div class="pillar-icon" aria-hidden="true">📖</div>
+          <h3 data-i18n="about.pillar1.title">Knowledge</h3>
+          <p data-i18n-block data-i18n="about.pillar1.text">A rigorous, modern curriculum that builds real understanding, not rote memory.</p>
+        </article>
+        <article class="pillar-card glass" data-reveal>
+          <div class="pillar-icon" aria-hidden="true">🎯</div>
+          <h3 data-i18n="about.pillar2.title">Training</h3>
+          <p data-i18n-block data-i18n="about.pillar2.text">Structured practice in academics, sport, and skill — discipline built through repetition.</p>
+        </article>
+        <article class="pillar-card glass" data-reveal>
+          <div class="pillar-icon" aria-hidden="true">🕯️</div>
+          <h3 data-i18n="about.pillar3.title">Character</h3>
+          <p data-i18n-block data-i18n="about.pillar3.text">Values, integrity, and empathy — the flame at the centre of everything we teach.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="features.eyebrow">Why Choose Us</p>
+        <h2 data-i18n="features.title">A campus built for growth</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">🎓</div>
+          <h3 data-i18n="features.f1.title">Experienced Faculty</h3>
+          <p data-i18n-block data-i18n="features.f1.text">Qualified teachers dedicated to every student's individual progress.</p>
+        </article>
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">🧪</div>
+          <h3 data-i18n="features.f2.title">Modern Curriculum</h3>
+          <p data-i18n-block data-i18n="features.f2.text">A balanced blend of national standards and 21st-century skills.</p>
+        </article>
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">🛡️</div>
+          <h3 data-i18n="features.f3.title">Safe Campus</h3>
+          <p data-i18n-block data-i18n="features.f3.text">A secure, supervised environment where every child is looked after.</p>
+        </article>
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">🕯️</div>
+          <h3 data-i18n="features.f4.title">Character Building</h3>
+          <p data-i18n-block data-i18n="features.f4.text">Values-based mentorship woven into daily school life.</p>
+        </article>
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">⚽</div>
+          <h3 data-i18n="features.f5.title">Extracurriculars</h3>
+          <p data-i18n-block data-i18n="features.f5.text">Sports, arts, and clubs that build teamwork beyond the classroom.</p>
+        </article>
+        <article class="feature-card glass" data-reveal>
+          <div class="feature-icon" aria-hidden="true">🏆</div>
+          <h3 data-i18n="features.f6.title">Proven Results</h3>
+          <p data-i18n-block data-i18n="features.f6.text">A consistent record of strong academic outcomes year after year.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACADEMICS ============ -->
+  <section class="section" id="academics">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="academics.eyebrow">Academics</p>
+        <h2 data-i18n="academics.title">Programs for every stage</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Academic levels">
+        <button type="button" class="tab-btn is-active" role="tab" id="tab-pre" aria-selected="true" aria-controls="panel-pre" tabindex="0" data-tab="pre" data-i18n="academics.tabs.pre">Pre-Primary</button>
+        <button type="button" class="tab-btn" role="tab" id="tab-primary" aria-selected="false" aria-controls="panel-primary" tabindex="-1" data-tab="primary" data-i18n="academics.tabs.primary">Primary</button>
+        <button type="button" class="tab-btn" role="tab" id="tab-middle" aria-selected="false" aria-controls="panel-middle" tabindex="-1" data-tab="middle" data-i18n="academics.tabs.middle">Middle</button>
+        <button type="button" class="tab-btn" role="tab" id="tab-secondary" aria-selected="false" aria-controls="panel-secondary" tabindex="-1" data-tab="secondary" data-i18n="academics.tabs.secondary">Secondary</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel glass is-active" id="panel-pre" data-panel="pre" role="tabpanel" aria-labelledby="tab-pre" tabindex="0">
+          <h3 data-i18n="academics.pre.title">Pre-Primary (Playgroup – KG)</h3>
+          <p data-i18n-block data-i18n="academics.pre.text">A nurturing early-years foundation built around play, language, and early numeracy.</p>
+        </div>
+        <div class="tab-panel glass" id="panel-primary" data-panel="primary" role="tabpanel" aria-labelledby="tab-primary" tabindex="0" hidden>
+          <h3 data-i18n="academics.primary.title">Primary (Grades 1–5)</h3>
+          <p data-i18n-block data-i18n="academics.primary.text">Core literacy, numeracy, and science skills built through structured, engaging lessons.</p>
+        </div>
+        <div class="tab-panel glass" id="panel-middle" data-panel="middle" role="tabpanel" aria-labelledby="tab-middle" tabindex="0" hidden>
+          <h3 data-i18n="academics.middle.title">Middle (Grades 6–8)</h3>
+          <p data-i18n-block data-i18n="academics.middle.text">Broader subjects and early specialisation, preparing students for board examinations.</p>
+        </div>
+        <div class="tab-panel glass" id="panel-secondary" data-panel="secondary" role="tabpanel" aria-labelledby="tab-secondary" tabindex="0" hidden>
+          <h3 data-i18n="academics.secondary.title">Secondary (Matric / O-Level)</h3>
+          <p data-i18n-block data-i18n="academics.secondary.text">Focused subject streams and exam preparation guided by experienced subject specialists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY / CAMPUS ============ -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Our Campus</p>
+        <h2 data-i18n="gallery.title">A place designed for learning</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">🏫</div><p data-i18n="gallery.classrooms">Classrooms</p></div>
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">🔬</div><p data-i18n="gallery.labs">Science Labs</p></div>
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">📚</div><p data-i18n="gallery.library">Library</p></div>
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">🏟️</div><p data-i18n="gallery.sports">Sports Ground</p></div>
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">🎨</div><p data-i18n="gallery.arts">Arts Studio</p></div>
+        <div class="gallery-tile glass" data-reveal><div class="gallery-icon" aria-hidden="true">💻</div><p data-i18n="gallery.computer">Computer Lab</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP ============ -->
+  <section class="section" id="leadership">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="leadership.eyebrow">Leadership</p>
+        <h2 data-i18n="leadership.title">Guided by experience</h2>
+      </div>
+      <div class="leadership-grid">
+        <article class="leader-card glass" data-reveal>
+          <div class="avatar-icon" aria-hidden="true">🎓</div>
+          <h3 data-i18n="leadership.p1.name">Principal</h3>
+          <p data-i18n-block data-i18n="leadership.p1.role">Head of School</p>
+        </article>
+        <article class="leader-card glass" data-reveal>
+          <div class="avatar-icon" aria-hidden="true">📘</div>
+          <h3 data-i18n="leadership.p2.name">Academic Coordinator</h3>
+          <p data-i18n-block data-i18n="leadership.p2.role">Curriculum & Faculty</p>
+        </article>
+        <article class="leader-card glass" data-reveal>
+          <div class="avatar-icon" aria-hidden="true">🤝</div>
+          <h3 data-i18n="leadership.p3.name">Student Affairs</h3>
+          <p data-i18n-block data-i18n="leadership.p3.role">Discipline & Wellbeing</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS / ACHIEVEMENTS ============ -->
+  <section class="section section-alt stats-section">
+    <div class="container">
+      <div class="stats-grid stats-grid-compact">
+        <div class="stat-card glass" data-reveal>
+          <span class="stat-number" data-count="15">0</span>
+          <p data-i18n="stats.years">Years Established</p>
+        </div>
+        <div class="stat-card glass" data-reveal>
+          <span class="stat-number" data-count="98" data-suffix="%">0</span>
+          <p data-i18n="stats.passRate">Pass Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Get in Touch</p>
+        <h2 data-i18n="contact.title">We'd love to hear from you</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info glass" data-reveal>
+          <p><strong data-i18n="contact.addressLabel">Address</strong><br><span data-i18n="contact.address">The Genius School System Rgtd., Gujranwala, Punjab, Pakistan</span> <a href="https://www.google.com/maps?q=32.368985,74.475129" target="_blank" rel="noopener" data-i18n="contact.getDirections">(Get Directions)</a></p>
+          <p><strong data-i18n="contact.phoneLabel">Phone</strong><br><a href="tel:+923456162445">+92 345 6162445</a><br><a href="tel:+923116162445">+92 311 6162445</a></p>
+          <p><strong data-i18n="contact.emailLabel">Email</strong><br><a href="mailto:thegeniuslearningzone@gmail.com">thegeniuslearningzone@gmail.com</a></p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+
+        <form class="contact-form glass" data-reveal>
+          <label for="cf-name" data-i18n="contact.form.name">Full Name</label>
+          <input type="text" id="cf-name" name="name" required>
+          <label for="cf-email" data-i18n="contact.form.email">Email Address</label>
+          <input type="email" id="cf-email" name="email" required>
+          <label for="cf-msg" data-i18n="contact.form.message">Message</label>
+          <textarea id="cf-msg" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+          <p class="form-note" data-i18n="contact.form.note">This is a demo form — messages open in your email client.</p>
+        </form>
+
+        <div class="contact-map glass" data-reveal>
+          <iframe title="School location map" src="https://www.google.com/maps?q=32.368985,74.475129&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="The Genius School System crest" class="footer-logo">
+      <p class="tagline"><span class="cap">join</span> THE GENIUS, <span class="cap">be</span> THE GENIUS</p>
+    </div>
+    <div class="footer-links">
+      <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#academics" data-i18n="nav.academics">Academics</a>
+      <a href="#gallery" data-i18n="nav.gallery">Campus</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4 data-i18n="footer.contactUs">Contact Us</h4>
+      <p data-i18n="contact.address">The Genius School System Rgtd., Gujranwala, Punjab, Pakistan</p>
+      <p>+92 345 6162445</p>
+      <p>+92 311 6162445</p>
+      <p><a href="mailto:thegeniuslearningzone@gmail.com">thegeniuslearningzone@gmail.com</a></p>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; <span id="year"></span> The Genius School System. <span data-i18n="footer.rights">All rights reserved.</span></p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
