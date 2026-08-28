@@ -457,7 +457,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 780px;
 }
 .hero-crest {
-  width: auto; height: 190px;
+  width: auto; height: 285px;
   object-fit: contain;
   margin-bottom: var(--space-md);
   filter: drop-shadow(0 10px 24px rgba(209, 14, 23, 0.25));
@@ -796,7 +796,7 @@ body[dir="rtl"] .brand-name small { letter-spacing: 0; }
 
 @media (max-width: 480px) {
   .hero-tagline { font-size: 1rem; }
-  .hero-crest { height: 130px; }
+  .hero-crest { height: 195px; }
   .contact-form, .contact-info { padding: var(--space-md); }
   .footer-brand .tagline { font-size: 0.85rem; }
 }
