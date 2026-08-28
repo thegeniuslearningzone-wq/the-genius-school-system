@@ -24,6 +24,8 @@
   --glow-candle: rgba(240, 170, 0, 0.35);
   --shadow-soft: 0 8px 30px rgba(24, 18, 16, 0.08);
   --shadow-lift: 0 16px 44px rgba(24, 18, 16, 0.14);
+  --watermark-opacity: 0.05;
+  --watermark-tint: var(--crest-red);
 
   /* ---- Type ---- */
   --font-display: 'Fraunces', 'Georgia', serif;
@@ -63,6 +65,8 @@
   --glow-candle: rgba(240, 170, 0, 0.28);
   --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.35);
   --shadow-lift: 0 16px 44px rgba(0, 0, 0, 0.5);
+  --watermark-opacity: 0.08;
+  --watermark-tint: var(--candle-gold);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -89,6 +93,46 @@ body {
   line-height: 1.6;
   transition: background var(--dur-med) var(--ease-out), color var(--dur-med) var(--ease-out);
   overflow-x: hidden;
+}
+
+/* ============================================================
+   SITE-WIDE LOGO WATERMARK
+   Every major section gets a faint, mask-shaped crest centred
+   behind its content. Uses mask-image (not an <img> or a flat
+   background-image), so the moment the transparent-background
+   version of the logo replaces assets/logo.png, the crest shape
+   alone appears — no white box — with zero further CSS changes.
+   Until then it renders as a very faint tinted rectangle, since
+   today's logo.png still has an opaque white background.
+   ============================================================ */
+.section, .hero, .footer {
+  position: relative;
+  isolation: isolate;
+}
+.section::before, .hero::before, .footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--watermark-tint);
+  -webkit-mask-image: url('../assets/logo.png');
+  mask-image: url('../assets/logo.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 46vmin;
+  mask-size: 46vmin;
+  opacity: var(--watermark-opacity);
+  pointer-events: none;
+  z-index: 0;
+}
+.section > .container,
+.hero > .hero-bg,
+.hero > .hero-inner,
+.footer > .container,
+.footer > .footer-copy {
+  position: relative;
+  z-index: 1;
 }
 
 body[dir="rtl"] {
@@ -246,7 +290,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 0.6rem;
   flex-shrink: 0;
 }
-.brand-logo { width: 42px; height: 42px; object-fit: contain; }
+.brand-logo { height: 60px; width: auto; object-fit: contain; }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 600;
@@ -326,7 +370,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .mobile-drawer {
   position: fixed;
-  top: 88px; right: 1rem; left: 1rem;
+  top: 108px; right: 1rem; left: 1rem;
   z-index: 99;
   padding: var(--space-md);
   transform: translateY(-16px) scale(0.98);
@@ -358,7 +402,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 6rem;
+  padding-top: 7.5rem;
 }
 .hero-bg {
   position: absolute;
@@ -413,7 +457,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 780px;
 }
 .hero-crest {
-  width: 96px; height: 96px;
+  width: auto; height: 190px;
   object-fit: contain;
   margin-bottom: var(--space-md);
   filter: drop-shadow(0 10px 24px rgba(209, 14, 23, 0.25));
@@ -424,9 +468,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   50%      { transform: translateY(-10px); }
 }
 .hero-tagline {
-  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  font-size: clamp(0.95rem, 5.2vw, 3.4rem);
   font-weight: 600;
   margin-bottom: var(--space-md);
+  white-space: nowrap;
+  letter-spacing: -0.005em;
 }
 .hero-tagline .cap { color: var(--text-primary); font-style: italic; }
 .hero-tagline .brand-word {
@@ -676,8 +722,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding-bottom: var(--space-lg);
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-logo { width: 56px; height: 56px; margin-bottom: var(--space-sm); }
-.footer-brand .tagline { font-size: 1rem; color: var(--candle-gold-light); }
+.footer-logo { width: auto; height: 84px; margin-bottom: var(--space-sm); }
+.footer-brand .tagline { font-size: 1rem; color: var(--candle-gold-light); white-space: nowrap; }
 .footer-links h4, .footer-contact h4 {
   font-family: var(--font-body);
   font-size: 0.85rem;
@@ -749,7 +795,13 @@ body[dir="rtl"] .brand-name small { letter-spacing: 0; }
 }
 
 @media (max-width: 480px) {
-  .hero-tagline { font-size: 1.7rem; }
-  .hero-crest { width: 76px; height: 76px; }
+  .hero-tagline { font-size: 1rem; }
+  .hero-crest { height: 130px; }
   .contact-form, .contact-info { padding: var(--space-md); }
+  .footer-brand .tagline { font-size: 0.85rem; }
+}
+
+@media (max-width: 360px) {
+  .hero-tagline { font-size: 0.85rem; }
+  .footer-brand .tagline { font-size: 0.75rem; }
 }
